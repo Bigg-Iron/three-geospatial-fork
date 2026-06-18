@@ -1,8 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "tui": {
-    "autoExit": true
-  },
+  "tui": { "autoExit": true },
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": [
@@ -21,12 +19,7 @@
     "sharedGlobals": []
   },
   "plugins": [
-    {
-      "plugin": "@nx/eslint/plugin",
-      "options": {
-        "targetName": "lint"
-      }
-    },
+    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
     {
       "plugin": "@nx/vite/plugin",
       "options": {
@@ -74,14 +67,13 @@
       "inputs": ["production", "^production"]
     },
     "nx-release-publish": {
-      "options": {
-        "packageRoot": "dist/packages/{projectName}"
-      }
+      "options": { "packageRoot": "dist/packages/{projectName}" }
     }
   },
   "release": {
     "projects": ["core", "effects", "atmosphere", "clouds"],
     "projectsRelationship": "independent"
   },
-  "analytics": false
+  "analytics": false,
+  "nxCloudId": "6a34558bc5c28ee28aeb0969"
 }
